@@ -21,7 +21,10 @@
 
 	<footer class="end-of-post">
 		<g:plusone size="medium" href="{{ site.domain }}{{ post.url }}"></g:plusone>
-		<a href="https://twitter.com/share" class="twitter-share-button" data-url="{{ site.domain }}{{ post.url }}">Tweet</a>
+		<a href="https://twitter.com/share" class="twitter-share-button"
+			data-url="{{ site.domain }}{{ post.url }}" text="{{ post-title }}">
+			Tweet
+		</a>
 		<span class="entry-tags">
 			{% for tag in post.tags %}
 			<a href="/tag#{{ tag }}" rel="tag">{{ tag }}</a>
