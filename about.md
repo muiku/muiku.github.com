@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Something about my blog
-description: Something more
+title: About Muiku blog
+description: Muiku blogs about ...
 ---
 
 {{ page.title }}
 ================
 
-I like to blog ...
+Coming (soon) ...
