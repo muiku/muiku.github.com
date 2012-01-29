@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Hello and welcome!
+description: This is the first post which is an itroductory post
 author: Kim Blomqvist
 ---
 

@@ -10,7 +10,7 @@
 		<abbr class="published" title="{{ post.date | date_to_xmlschema }}">
 			{{ post.date | date_to_string }}
 		</abbr>
-		<address class="vcard author">{{ post.author }}</address>
+		<address class="hcard author fn">{{ post.author }}</address>
 	</header>
 	
 	<section class="entry-content">{{ content }}</section>
