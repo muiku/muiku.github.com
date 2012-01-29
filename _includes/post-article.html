@@ -17,7 +17,7 @@
 
 	<footer class="end-of-post">
 		<g:plusone size="medium" href="{{ site.domain }}{{ post.url }}"></g:plusone>
-		<span id="fb-root"></span>
+		<span class="fb-like" data-href="{{ site.domain}}{{ post.url }}" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></span>
 		<span class="entry-tags">
 			{% for tag in post.tags %}
 			<a href="/tag#{{ tag }}" rel="tag">{{ tag }}</a>
