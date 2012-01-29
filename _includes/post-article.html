@@ -4,11 +4,7 @@
 
 <article class="post hentry">
 	<header>
-		<h1 class="entry-title"><a href="{{ post.url }}" rel="bookmark">
-		<span itemprop="name">{{ post.title }}</span>
-		</a></h1>
-
-		<span style="display: none;" itemprop="description">{{ post.description }}</span>
+		<h1 class="entry-title" itemprop="name">{{ post.title }}</h1>
 		
 		<abbr class="published updated" title="{{ post.date | date_to_xmlschema }}">
 			{{ post.date | date_to_string }}
@@ -16,7 +12,12 @@
 		<address class="vcard author"><span class="fn">{{ post.author }}</span></address>
 	</header>
 	
-	<section class="entry-content">{{ content }}</section>
+	<section class="entry-content">
+		<span style="display: none;" itemprop="description">{{ post.description }}</span>
+
+		{{ content }}
+
+	</section>
 
 	<footer class="end-of-post">
 		<g:plusone size="medium" href="{{ site.domain }}{{ post.url }}"></g:plusone>
