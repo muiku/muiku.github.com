@@ -14,4 +14,4 @@ Why to start following us?
 
 If you are interested in technology in general, like messing around with things and possibly are entrepreneur, you are likely going to find interesting read here. I have plans to blog about all kind of research and development we are going throw. That is web application development (Zend Framework, Django), embedded hardware design and programming (proto boards, C/C++). In the next few days I am going to expose our very first product, which I think will be awesome -- cannot wait to get tell it ...
 
-(Of course the blog theme need to be polished too ;) 
+(Of course the blog theme needs to be polished too ;) 
