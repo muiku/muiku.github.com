@@ -11,6 +11,6 @@ The template is based on initializer-template. It represents the responsive web 
 Why to start following us?
 --------------------------
 
-If you are interested in technology in general, like hacking and possibly are entrepreneurship, you are likely going to find interesting read here. I have plans to blog about all kind of development we are going throw. That is web application development (Zend Framework, Django), embedded hardware design and programming (proto boards, C/C++). In the next few days I am going to expose our very first product, which I think will be awesome -- cannot wait to get tell it ...
+If you are interested in technology in general, like hacking and possibly are entrepreneur, you are likely going to find interesting read here. I have plans to blog about all kind of development we are going throw. That is web application development (Zend Framework, Django), embedded hardware design and programming (proto boards, C/C++). In the next few days I am going to expose our very first product, which I think will be awesome -- cannot wait to get tell it ...
 
 (Of course the blog theme has to been polished too ;) 
