@@ -4,9 +4,12 @@
 
 <article class="post hentry">
 	<header>
-		<h1 class="entry-title">
-		<a href="{{ post.url }}" rel="bookmark">{{ post.title }}</a>
-		</h1>
+		<h1 class="entry-title"><a href="{{ post.url }}" rel="bookmark">
+		<span itemprop="name">{{ post.title }}</span>
+		</a></h1>
+
+		<span style="display: none;" itemprop="description">{{ post.description }}</span>
+		
 		<abbr class="published updated" title="{{ post.date | date_to_xmlschema }}">
 			{{ post.date | date_to_string }}
 		</abbr>
