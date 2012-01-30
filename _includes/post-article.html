@@ -4,7 +4,11 @@
 
 <article itemscope itemtype="http://schema.org/BlogPosting" class="post hentry">
 	<header>
-		<h1 class="entry-title" itemprop="name">{{ post.title }}</h1>
+		<h1 class="entry-title" itemprop="name">
+			<a href="{{ site.domain }}{{ post.url }}" rel="bookmark" title="{{ post.title }}">
+			{{ post.title }}
+			</a>
+		</h1>
 		
 		<abbr class="published updated" title="{{ post.date | date_to_xmlschema }}">
 			{{ post.date | date_to_string }}
