@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Hello and welcome!
-description: Introductory post. How this blog was created and why to start following it.
+title: Hello and welcome to Muiku blog!
+description: Introductory post. How Muiku blog was created and why to start following it.
 author: Kim Blomqvist
 ---
 
