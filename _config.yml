@@ -1,10 +1,11 @@
 markdown: rdiscount
 pygments: true
+url: http://blog.muiku.com
 permalink: /:year/:month/:day/:title
 
 lsi: true
 paginate: 20
 
-domain: http://blog.muiku.com
 exclude:
 - CNAME
+- _site
