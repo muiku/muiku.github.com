@@ -1,7 +1,7 @@
 ---
 layout: default
-title: About Muiku blog
-description: Muiku blogs about ...
+title: About
+description:
 ---
 
 {{ page.title }}
