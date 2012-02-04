@@ -7,19 +7,13 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-	{% if page.title %}
-	<title>Muiku blog &raquo; {{ page.title }}</title>
-	{% else %}
-	<title>Muiku blog</title>
-	{% endif %}
-
+	{% if page.title %} <title>Muiku blog &raquo; {{ page.title }}</title>
+	{% else %} <title>Muiku blog</title> {% endif %}
 	<meta name="description" content="{{ page.description }}">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 
 	<link rel="stylesheet" href="/css/style.css" />
-
-	<script src="/js/libs/modernizr-2.0.6.min.js"></script>
-
+	<link rel="stylesheet" href="/js/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
 	<style type="text/css">
 		.post .published, .post .entry-tags { float: right; }
 		.post .entry-title { margin-bottom: 5px; }
@@ -30,7 +24,7 @@
 		#disqus_thread { margin-top: 20px; }
 	</style>
 
-	<link rel="stylesheet" href="/js/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+	<script src="/js/libs/modernizr-2.0.6.min.js"></script>
 </head>
 <body>
 
@@ -42,7 +36,7 @@
 </div>
 
 <div id="main-container">
-	<div id="main" class="wrapper clearfix">
+	<div id="main" role="main" class="wrapper clearfix">
 
 		{{ content }}
 
