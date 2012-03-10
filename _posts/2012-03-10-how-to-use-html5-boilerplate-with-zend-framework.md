@@ -94,7 +94,7 @@ Ouh! And don't forget to point site docroot to `public/publish/`. In Apache2 you
 
 Hope this tutorial helps you to use H5BP and adapt its build script with Zend Framework. You can follow the integration process in GitHub
 
-- [HTML5 Boilerplate Zend Framework Integration](HTML5 Boilerplate Zend Framework Integration)
+- [HTML5 Boilerplate Zend Framework Integration](https://github.com/muiku/h5bp-zendframework)
 - [The H5BP ant build script Zend Framework integration](https://github.com/muiku/h5bp-antbs-zendframework)
 
 [Zend Framework 2](http://packages.zendframework.com/) is, in the time of writing, in Beta3 and has now rewritten view layer so maybe we will see ZF2 integration soon ;)
