@@ -4,12 +4,13 @@ title: How to use HTML5 Boilerplate with Zend Framework
 description: It is described how H5BP and its build script can be integrated with Zend Framework with the minimum efforts.
 author: Kim
 tags:
-  - zf
-  - h5bp
+- zf
+- h5bp
 ---
 
-<img itemprop="image" src="{{ site.url }}/images/h5bp-zf-integration.png" alt="H5BP star and ZF logo integrated" style="float: left; margin: 10px 10px 0 0;" />
-You may have noticed that when ever you start a new project for a website there is quite a bit boilerplate HTML and CSS to write. Fortunately there is bunch of projects, such as [HTML5 Boilerplate](https://github.com/h5bp) and [Bootstrap](https://github.com/twitter/bootstrap), which provide default HTML5, CSS and JavaScript where to start. Another interesting project is [Initializr](http://www.initializr.com) that combines the upper two. Good so far but, if used with a web application framework there are still tedious tasks to complete, for example, updating the framework's template files. In addition, H5BP comes with a build script that takes care of CSS and JS minification and especially the integration of this tool with the chosen framework might get problematic. Here it is shown how to integrate HTML5 Boilerplate and its build script with [Zend Framework](http://framework.zend.com) (version 1).
+<img itemprop="image" src="{{ site.url }}/images/h5bp-zf-integration.png" alt="H5BP star and ZF logo integrated" />
+
+You may have noticed that when ever you start a new project for a website there is quite a bit boilerplate HTML and CSS to write. Fortunately there is bunch of projects, such as [HTML5 Boilerplate](http://html5boilerplate.com/) and [Bootstrap](http://twitter.github.com/bootstrap/), which provide default HTML5, CSS and JavaScript where to start. Another interesting project is [Initializr](http://www.initializr.com) that combines the upper two. Good so far but, if used with a web application framework there are still tedious tasks to complete, for example, updating the framework's template files. In addition, H5BP comes with a build script that takes care of CSS and JS minification and especially the integration of this tool with the chosen framework might get problematic. Here it is shown how to integrate HTML5 Boilerplate and its build script with [Zend Framework](http://framework.zend.com) (version 1).
 
 ## Step 1: Let's create a new project
 
