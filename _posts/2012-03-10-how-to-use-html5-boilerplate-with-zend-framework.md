@@ -39,7 +39,7 @@ What did we get? &ndash; A new directory `public/build/`. Cd into it and command
 - `public/intermediate/` &ndash; you can ignore this or remove it if you like
 - `application/layouts/scripts/publish/` &ndash; the builded layout templates locate here
 
-If you now check your development site in the browser, you should not see anything new. All the CSS and JS are still as written and not in minified form. So to make it work open the `application.ini` and tell ZF to look layouts from `application/layouts/scripts/publish/` folder when in production:
+If you now check your development site in the browser, you shouldn't see anything new. All the CSS and JS are still as before and not in minified form. To enable the minified assets change the docroot of your web server to point to the `public/publish/` and tell ZF to look layouts from `application/layouts/scripts/publish/` folder when in production. The latter is done by editing `application.ini`:
 
     [production]
     phpSettings.display_startup_errors = 0
@@ -71,23 +71,21 @@ If you now check your development site in the browser, you should not see anythi
     resources.frontController.params.displayExceptions = 1
     resources.layout.layoutPath = APPLICATION_PATH "/layouts/scripts"
 
-Ouh! And don't forget to point site docroot to `public/publish/`. In Apache2 you can do this in this way:
+Here is an example virtualhost config to set docroot in Apache2:
 
     <VirtualHost *:80>
-        # ...
+        ServerName my-zfproject.localhost
 
         SetEnv APPLICATION_ENV production
 
-        DocumentRoot /home/me/workspace/myproject/public/publish
+        DocumentRoot /home/your/workspace/my-zfproject/public/publish
         DirectoryIndex index.php
 
-        <Directory /home/me/workspace/myproject/public/publish>
+        <Directory /home/your/workspace/my-zfproject/public/publish>
             AllowOverride All
             Order allow,deny
             Allow from all
         </Directory>
-
-        # ...
     </VirtualHost>
 
 ## That's it
