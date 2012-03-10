@@ -13,19 +13,19 @@ You may have noticed that when ever you start a new project for a website there 
 
 ## Step 1: Let's create a new project
 
-Here it is assumed that you have ZF tool set in PATH and that you have wget installed. Create! Start by changing the directory to your workspace or where ever you keep your projects and cast the spells given above:
+It is assumed that you have ZF tool set in PATH and that you have wget installed. Create! Start by changing the directory to your workspace or where ever you keep your projects and cast the spells given below:
 
     zf create project my-zfproject
     cd my-zfproject && zf enable layout
     wget --no-check-certificate https://github.com/muiku/h5bp-zendframework/tarball/v3.0.2-zfint -O - | tar -xvz --strip 1
 
-What just happend? &ndash; Well you created a new ZF project, have layouts enabled and the ZF's default layout template has all the HTML5 Boilerplate goodies added. In addition, you got new a .htaccess file and error page. In short, you are completely ready to start producing the application. Though you may like to remove a few unnecessary files, which are:
+What just happend? &ndash; Well you created a new ZF project, have layouts enabled and the ZF's default layout template has all the HTML5 Boilerplate goodies added. In addition, you got a new .htaccess file and error page. In short, you are completely ready to start producing the application. Though you may like to remove a few unnecessary files, which are:
 
 - `.gitattributes`
 - `.gitignore`
 - `readme.md`
 
-These files were copied with others from our [H5BP Zend Framework integration](https://github.com/muiku/h5bp-zendframework) GitHub repository (the third line of the given commands).
+These files were copied with others from our [H5BP Zend Framework integration](https://github.com/muiku/h5bp-zendframework) GitHub repository.
 
 ## Step 2: Put build script into use
 
@@ -33,13 +33,13 @@ HTML5 build script is an optional tool and kept in the separate repository. Thus
 
     wget --no-check-certificate https://github.com/muiku/h5bp-antbs-zendframework/tarball/zfint -O - | tar -xvz --strip 1
 
-What did we get? &ndash; A new directory public/build/. Cd into it and command `ant` - yes the build script needs [Apache Ant](http://ant.apache.org/) to be installed. After that H5BP build script will begin to run and compress your static assets, such as css, js, images etc., which are placed under public/ directory. If the build ends successfully you should have three new directories:
+What did we get? &ndash; A new directory `public/build/`. Cd into it and command `ant` &ndash; yes, the build script needs [Apache Ant](http://ant.apache.org/) to be installed. After that H5BP build script will begin to run and compress your static assets, which are CSS, JavaScript, images etc. &ndash; all the things kept under `public/`. If the build ends successfully, you should have three new directories:
 
 - `public/publish/` &ndash; this is your new `public/`
 - `public/intermediate/` &ndash; you can ignore this or remove it if you like
 - `application/layouts/scripts/publish/` &ndash; the builded layout templates locate here
 
-If you now check your development site in the browser you should not see anything new. All the CSS and JS are still as written. To make magic happen open the application.ini and tell ZF to look layouts from `application/layouts/scripts/publish/` folder. Your `application.ini` should look something like this
+If you now check your development site in the browser, you should not see anything new. All the CSS and JS are still as written and not in minified form. So to make it work open the `application.ini` and tell ZF to look layouts from `application/layouts/scripts/publish/` folder when in production:
 
     [production]
     phpSettings.display_startup_errors = 0
@@ -71,7 +71,7 @@ If you now check your development site in the browser you should not see anythin
     resources.frontController.params.displayExceptions = 1
     resources.layout.layoutPath = APPLICATION_PATH "/layouts/scripts"
 
-Ouh! And don't forget to point site docroot to `public/publish/`. In Apache2 you can do this in this way
+Ouh! And don't forget to point site docroot to `public/publish/`. In Apache2 you can do this in this way:
 
     <VirtualHost *:80>
         # ...
@@ -97,5 +97,5 @@ Hope this tutorial helps you to use H5BP and adapt its build script with Zend Fr
 - [HTML5 Boilerplate Zend Framework Integration](HTML5 Boilerplate Zend Framework Integration)
 - [The H5BP ant build script Zend Framework integration](https://github.com/muiku/h5bp-antbs-zendframework)
 
-[Zend Framework 2](http://packages.zendframework.com/) is, in the time of writing, in Beta3 and has now rewritten view layer so maybe we see ZF2 integration soon ;)
+[Zend Framework 2](http://packages.zendframework.com/) is, in the time of writing, in Beta3 and has now rewritten view layer so maybe we will see ZF2 integration soon ;)
 
