@@ -19,11 +19,11 @@ Here it is assumed that you have ZF tool set in PATH and that you have wget inst
     cd my-zfproject && zf enable layout
     wget --no-check-certificate https://github.com/muiku/h5bp-zendframework/tarball/v3.0.2-zfint -O - | tar -xvz --strip 1
 
-What just happend? -- Well you created a new ZF project, have layouts enabled and the ZF's default layout template has all the HTML5 Boilerplate goodies added. In addition, you got new a .htaccess file and error page. In short, you are completely ready to start producing the application. Though you may like to remove a few unnecessary files, which are:
+What just happend? &ndash; Well you created a new ZF project, have layouts enabled and the ZF's default layout template has all the HTML5 Boilerplate goodies added. In addition, you got new a .htaccess file and error page. In short, you are completely ready to start producing the application. Though you may like to remove a few unnecessary files, which are:
 
-- .gitattributes
-- .gitignore
-- readme.md
+- `.gitattributes`
+- `.gitignore`
+- `readme.md`
 
 These files were copied with others from our [H5BP Zend Framework integration](https://github.com/muiku/h5bp-zendframework) GitHub repository (the third line of the given commands).
 
@@ -33,13 +33,13 @@ HTML5 build script is an optional tool and kept in the separate repository. Thus
 
     wget --no-check-certificate https://github.com/muiku/h5bp-antbs-zendframework/tarball/zfint -O - | tar -xvz --strip 1
 
-What did we get? -- A new directory public/build/. Cd into it and command ant. After that H5BP build script will begin to run and comrepss your files, which are css/js/images etc. under public/ directory. If the build ends successfully you should have three new directories:
+What did we get? &ndash; A new directory public/build/. Cd into it and command `ant` - yes the build script needs [Apache Ant](http://ant.apache.org/) to be installed. After that H5BP build script will begin to run and compress your static assets, such as css, js, images etc., which are placed under public/ directory. If the build ends successfully you should have three new directories:
 
-- public/publish/ - this is your new public/
-- public/intermediate/ - you can ignore this or remove it if you like
-- application/layouts/scripts/publish/ - the builded layout templates locate here
+- `public/publish/` &ndash; this is your new `public/`
+- `public/intermediate/` &ndash; you can ignore this or remove it if you like
+- `application/layouts/scripts/publish/` &ndash; the builded layout templates locate here
 
-If you now check your development site in the browser you should not see anything new. All the CSS and JS are still as written. To make magic happen open the application.ini and tell ZF to look layouts from application/layouts/scripts/publish/ folder. Your application.ini should look something like this
+If you now check your development site in the browser you should not see anything new. All the CSS and JS are still as written. To make magic happen open the application.ini and tell ZF to look layouts from `application/layouts/scripts/publish/` folder. Your `application.ini` should look something like this
 
     [production]
     phpSettings.display_startup_errors = 0
@@ -71,7 +71,7 @@ If you now check your development site in the browser you should not see anythin
     resources.frontController.params.displayExceptions = 1
     resources.layout.layoutPath = APPLICATION_PATH "/layouts/scripts"
 
-Ouh! And don't forget to point site docroot to public/publish/. In Apache2 you can do this in this way
+Ouh! And don't forget to point site docroot to `public/publish/`. In Apache2 you can do this in this way
 
     <VirtualHost *:80>
         # ...
