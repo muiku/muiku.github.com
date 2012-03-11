@@ -37,20 +37,12 @@ HTML5 build script is an optional tool and kept in the separate repository. Thus
 What did we get? &ndash; A new directory `public/build/`. Cd into it and command `ant` &ndash; yes, the build script needs [Apache Ant](http://ant.apache.org/) to be installed. After that H5BP build script will begin to run and compress your static assets, which are CSS, JavaScript, images etc. &ndash; all the things kept under `public/`. If the build ends successfully, you should have three new directories:
 
 - `public/publish/` &ndash; this is your new `public/`
-- `public/intermediate/` &ndash; you can ignore this or remove it if you like
+- `public/intermediate/` &ndash; this is for staging, ignore it so far
 - `application/layouts/scripts/publish/` &ndash; the builded layout templates locate here
 
-If you now check your development site in the browser, you shouldn't see anything new. All the CSS and JS are still as before and not in minified form. To enable the minified assets change the docroot of your web server to point to the `public/publish/` and tell ZF to look layouts from `application/layouts/scripts/publish/` folder when in production. The latter is done by editing `application.ini`:
+If you now check your development site in the browser, you shouldn't see anything new. All the CSS and JS are still as before and not in minified form. To enable the minified assets change the docroot of your web server to point to the `public/publish/` and tell ZF to look layouts from `application/layouts/scripts/publish/` folder when in production. The latter is done by editing `application.ini`. Make sure that you have the following lines in it:
 
     [production]
-    phpSettings.display_startup_errors = 0
-    phpSettings.display_errors = 0
-    includePaths.library = APPLICATION_PATH "/../library"
-    bootstrap.path = APPLICATION_PATH "/Bootstrap.php"
-    bootstrap.class = "Bootstrap"
-    appnamespace = "Application"
-    resources.frontController.controllerDirectory = APPLICATION_PATH "/controllers"
-    resources.frontController.params.displayExceptions = 0
 
     ; Published (H5BP build script generated) layouts
     resources.layout.layoutPath = APPLICATION_PATH "/layouts/scripts/publish"
@@ -62,14 +54,9 @@ If you now check your development site in the browser, you shouldn't see anythin
     [staging : production]
 
     [testing : production]
-    phpSettings.display_startup_errors = 1
-    phpSettings.display_errors = 1
     resources.layout.layoutPath = APPLICATION_PATH "/layouts/scripts"
 
     [development : production]
-    phpSettings.display_startup_errors = 1
-    phpSettings.display_errors = 1
-    resources.frontController.params.displayExceptions = 1
     resources.layout.layoutPath = APPLICATION_PATH "/layouts/scripts"
 
 Here is an example virtualhost config to set docroot in Apache2:
