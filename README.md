@@ -1,5 +1,8 @@
 # [Muiku blog](http://blog.muiku.com)
 
+We blog about our projects and other things we have experienced when doing R&D.
+
+If you like to have a something similar fork https://github.com/kblomqvist/ghblog-template.
 
 ## License
 
@@ -7,8 +10,6 @@ The following directories and their contents are Copyright Muiku Oy. You may not
 
 - _posts/
 - images/
-
-If you like to have a something similar fork https://github.com/kblomqvist/ghblog-template.
 
 The code that this project consists of is licensed under MIT and is based of MIT-licensed work by [Tom Preston-Werner](http://github.com/mojombo/jekyll).
 
