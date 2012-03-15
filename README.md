@@ -1,10 +1,7 @@
-Muiku's blog
-============
+# [Muiku blog](http://blog.muiku.com)
 
-We are experimenting ...
 
-License
--------
+## License
 
 The following directories and their contents are Copyright Muiku Oy. You may not reuse anything therein without Muiku's permission:
 
@@ -15,4 +12,12 @@ If you like to have a something similar fork https://github.com/kblomqvist/ghblo
 
 The code that this project consists of is licensed under MIT and is based of MIT-licensed work by [Tom Preston-Werner](http://github.com/mojombo/jekyll).
 
-The desing of this blog is based on [initializer-template](https://github.com/verekia/initializr-template).
+### Assets
+
+- Twitter Bootstrap: Apache License, Version 2.0.
+- jQuery: MIT/GPL license.
+- Modernizr: MIT/BSD license.
+- Normalize.css: Public Domain.
+- Icons from Glyphicons Free, licensed under CC BY 3.0.
+- The template design is based on [initializr-template](https://github.com/verekia/initializr-template).
+
