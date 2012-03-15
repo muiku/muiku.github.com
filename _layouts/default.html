@@ -14,13 +14,16 @@
 	{% endif %}
 	<meta name="description" content="{{ page.description }}">
 	<meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" href="/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="/js/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="/css/prettify.css" />
+
 	<link rel="stylesheet" href="/css/style.css" />
+	<link rel="stylesheet" href="/css/bootstrap.min.css" />
 	<script src="/js/libs/modernizr-2.5.3-respond-1.1.0.min.js"></script>
+	<script src="/js/libs/prettify.js"></script>
 </head>
 
-<body>
+<body onload="prettyPrint()">
 <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
 <div id="header-container">

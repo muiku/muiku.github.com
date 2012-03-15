@@ -20,7 +20,7 @@ You may have noticed that when ever you start a new project for a website there 
 
 It is assumed that you have ZF tool set in PATH and that you have wget installed. Create! Start by changing the directory to your workspace or where ever you keep your projects and cast the spells given below:
 
-<pre>
+<pre class="prettyprint linenums lang-sh">
 zf create project my-zfproject
 cd my-zfproject && zf enable layout
 wget --no-check-certificate https://github.com/muiku/h5bp-zendframework/tarball/v3.0.2-zfint -O - | tar -xvz --strip 1
@@ -38,7 +38,7 @@ These files were copied with others from our [H5BP Zend Framework integration](h
 
 HTML5 build script is an optional tool and kept in the separate repository. Thus it was not included yet in step 1 and there is really no hurry for it because it's used in deployment for the most part. However, now it's time to put it into use. Under your project directory say:
 
-<pre>
+<pre class="prettyprint linenums lang-sh">
 wget --no-check-certificate https://github.com/muiku/h5bp-antbs-zendframework/tarball/zfint -O - | tar -xvz --strip 1
 </pre>
 
@@ -50,7 +50,7 @@ What did we get? &ndash; A new directory `public/build/`. Cd into it and command
 
 If you now check your development site in the browser, you shouldn't see anything new. All the CSS and JS are still as before and not in minified form. To enable the minified assets change the docroot of your web server to point to the `public/publish/` and tell ZF to look layouts from `application/layouts/scripts/publish/` folder when in production. The latter is done by editing `application.ini`. Make sure that you have the following lines in it:
 
-<pre>
+<pre class="prettyprint linenums lang-php">
 [production]
 
 ; Published (H5BP build script generated) layouts
@@ -71,7 +71,7 @@ resources.layout.layoutPath = APPLICATION_PATH "/layouts/scripts"
 
 Here is an example virtualhost config to set docroot in Apache2:
 
-<pre>
+<pre class="prettyprint linenums lang-html">
 &lt;VirtualHost *:80&gt;
     ServerName my-zfproject.localhost
 
