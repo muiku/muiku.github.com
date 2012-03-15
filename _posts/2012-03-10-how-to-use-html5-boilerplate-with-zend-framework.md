@@ -1,12 +1,15 @@
 ---
 layout: post
-title: How to use HTML5 Boilerplate with Zend Framework
+title: "How to use HTML5 Boilerplate with Zend Framework"
 description: "It is described how H5BP and its build script can be integrated with Zend Framework with the minimum efforts."
-author: Kim
+tweet-text: "Use #HTML5 #Boilerplate with #ZF"
+author: "Kim"
 tags:
 - zf
 - h5bp
-tweet: "Use #HTML5 #Boilerplate with #ZF"
+categories:
+- "Web development"
+- "Zend Framework"
 ---
 
 <img itemprop="image" src="{{ site.url }}/images/h5bp-zf-integration.png" alt="H5BP star and ZF logo integrated" />
