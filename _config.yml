@@ -1,9 +1,10 @@
+title: Muiku blog
+url: http://blog.muiku.com
 markdown: rdiscount
 pygments: true
-url: http://blog.muiku.com
 permalink: /:year/:month/:day/:title
 
-lsi: true
+#lsi: true
 paginate: 20
 
 exclude:

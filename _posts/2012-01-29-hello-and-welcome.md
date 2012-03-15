@@ -1,10 +1,8 @@
 ---
 layout: post
-title: Hello and welcome to Muiku blog!
-description: Introductory post. How Muiku blog was created and why to start following it.
+title: "Hello and welcome to Muiku blog!"
+description: "Introductory post. How Muiku blog was created and why to start following it."
 author: Kim
-tags:
-- web related
 ---
 
 This is [Muiku Oy](http://www.muiku.com)'s official blog. I crafted this blog up when experimenting with [Jekyll](https://github.com/mojombo/jekyll) and [initializr-template](http://verekia.com/initializr/responsive-template). Jekyll offers nice way to separate posts from the layout and other content. The possibility to derive layouts from other layouts was also something I felt in love (and of course Jekyll was suitably geeky). In addition I was decided that I want to host our blog in GitHub pages, which also has Jekyll support.

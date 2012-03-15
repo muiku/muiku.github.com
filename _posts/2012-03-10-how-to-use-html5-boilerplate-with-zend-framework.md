@@ -20,9 +20,11 @@ You may have noticed that when ever you start a new project for a website there 
 
 It is assumed that you have ZF tool set in PATH and that you have wget installed. Create! Start by changing the directory to your workspace or where ever you keep your projects and cast the spells given below:
 
-    zf create project my-zfproject
-    cd my-zfproject && zf enable layout
-    wget --no-check-certificate https://github.com/muiku/h5bp-zendframework/tarball/v3.0.2-zfint -O - | tar -xvz --strip 1
+<pre>
+zf create project my-zfproject
+cd my-zfproject && zf enable layout
+wget --no-check-certificate https://github.com/muiku/h5bp-zendframework/tarball/v3.0.2-zfint -O - | tar -xvz --strip 1
+</pre>
 
 What just happend? &ndash; Well you created a new ZF project, have layouts enabled and the ZF's default layout template has all the HTML5 Boilerplate goodies added. In addition, you got a new .htaccess file and error page. In short, you are completely ready to start producing the application. Though you may like to remove a few unnecessary files, which are:
 
@@ -36,7 +38,9 @@ These files were copied with others from our [H5BP Zend Framework integration](h
 
 HTML5 build script is an optional tool and kept in the separate repository. Thus it was not included yet in step 1 and there is really no hurry for it because it's used in deployment for the most part. However, now it's time to put it into use. Under your project directory say:
 
-    wget --no-check-certificate https://github.com/muiku/h5bp-antbs-zendframework/tarball/zfint -O - | tar -xvz --strip 1
+<pre>
+wget --no-check-certificate https://github.com/muiku/h5bp-antbs-zendframework/tarball/zfint -O - | tar -xvz --strip 1
+</pre>
 
 What did we get? &ndash; A new directory `public/build/`. Cd into it and command `ant` &ndash; yes, the build script needs [Apache Ant](http://ant.apache.org/) to be installed. After that H5BP build script will begin to run and compress your static assets, which are CSS, JavaScript, images etc. &ndash; all the things kept under `public/`. If the build ends successfully, you should have three new directories:
 
@@ -46,39 +50,43 @@ What did we get? &ndash; A new directory `public/build/`. Cd into it and command
 
 If you now check your development site in the browser, you shouldn't see anything new. All the CSS and JS are still as before and not in minified form. To enable the minified assets change the docroot of your web server to point to the `public/publish/` and tell ZF to look layouts from `application/layouts/scripts/publish/` folder when in production. The latter is done by editing `application.ini`. Make sure that you have the following lines in it:
 
-    [production]
+<pre>
+[production]
 
-    ; Published (H5BP build script generated) layouts
-    resources.layout.layoutPath = APPLICATION_PATH "/layouts/scripts/publish"
+; Published (H5BP build script generated) layouts
+resources.layout.layoutPath = APPLICATION_PATH "/layouts/scripts/publish"
 
-    ; Ensure that view encoding is UTF-8 and that view helpers use HTML5
-    resources.view.encoding = "UTF-8"
-    resources.view.doctype = "HTML5"
+; Ensure that view encoding is UTF-8 and that view helpers use HTML5
+resources.view.encoding = "UTF-8"
+resources.view.doctype = "HTML5"
 
-    [staging : production]
+[staging : production]
 
-    [testing : production]
-    resources.layout.layoutPath = APPLICATION_PATH "/layouts/scripts"
+[testing : production]
+resources.layout.layoutPath = APPLICATION_PATH "/layouts/scripts"
 
-    [development : production]
-    resources.layout.layoutPath = APPLICATION_PATH "/layouts/scripts"
+[development : production]
+resources.layout.layoutPath = APPLICATION_PATH "/layouts/scripts"
+</pre>
 
 Here is an example virtualhost config to set docroot in Apache2:
 
-    <VirtualHost *:80>
-        ServerName my-zfproject.localhost
+<pre>
+&lt;VirtualHost *:80&gt;
+    ServerName my-zfproject.localhost
 
-        SetEnv APPLICATION_ENV production
+    SetEnv APPLICATION_ENV production
 
-        DocumentRoot /home/your/workspace/my-zfproject/public/publish
-        DirectoryIndex index.php
+    DocumentRoot /home/your/workspace/my-zfproject/public/publish
+    DirectoryIndex index.php
 
-        <Directory /home/your/workspace/my-zfproject/public/publish>
-            AllowOverride All
-            Order allow,deny
-            Allow from all
-        </Directory>
-    </VirtualHost>
+    &lt;Directory /home/your/workspace/my-zfproject/public/publish&gt;
+        AllowOverride All
+        Order allow,deny
+        Allow from all
+    &lt;/Directory&gt;
+&lt;/VirtualHost&gt;
+</pre>
 
 ## That's it
 
