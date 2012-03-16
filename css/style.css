@@ -167,6 +167,7 @@ nav a:hover{
 .posts-list .author { display: none; }
 
 .fb-like { vertical-align: top; }
+.reddit_button a:last-child { font-size: 15px; }
 #disqus_thread { margin-top: 20px; }
 
 .feed { margin-left: 3px; padding: 0 0 0 19px; background: url("/feed-icon-14x14.png") no-repeat 0 50%; }
