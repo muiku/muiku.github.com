@@ -6,7 +6,7 @@ If you like to have a something similar fork https://github.com/kblomqvist/ghblo
 
 ## License
 
-The following directories and their contents are Copyright Muiku Oy. You may not reuse anything therein without Muiku's permission:
+The following directories and their contents are Copyright [Muiku Oy](http://www.muiku.com). You may not reuse anything therein without Muiku's permission:
 
 - _posts/
 - images/
