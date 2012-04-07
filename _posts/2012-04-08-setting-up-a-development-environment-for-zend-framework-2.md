@@ -121,4 +121,4 @@ cd ZendSkeletonApplication/public
 php -S localhost:8000
 </pre>
 
-<img src="images/zf2-welcome-screen.png" alt="Zend Framework 2 welcome screen" />
+<img src="/images/zf2-welcome-screen.png" alt="Zend Framework 2 welcome screen" />
