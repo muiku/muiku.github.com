@@ -18,7 +18,7 @@ I have followed the development process of [Zend Framework 2](http://framework.z
 
 ## Install PHP 5.4.0 locally
 
-Zend Framework 2 requires PHP 5.3, but I wanted to use PHP 5.4 because of its built-in web server. As I use Debian 6 as my primary Linux distro, I hadn't other choises than built PHP 5.4 from sources.
+Zend Framework 2 requires PHP 5.3, but I wanted to use PHP 5.4 because of its built-in web server. As I use Debian 6 as my primary Linux distro, I hadn't other choices than built PHP 5.4 from sources.
 
 First fetch PHP 5.4.0 source code:
 
