@@ -49,7 +49,7 @@ libxslt1-dev \
 autoconf
 </pre>
 
-Now run configure script packed with PHP 5.4.0 sources. I decided to add all most everything whether I need those or not. In addition, I wanted PHP work locally thus `--prefix=$HOME/local/php5`. To browse through for other configuration params call `./configure --help`.
+Now run configure script packed with PHP 5.4.0 sources. I decided to add almost everything whether I need those or not. In addition, I wanted PHP work locally thus `--prefix=$HOME/local/php5`. To browse through for other configuration params call `./configure --help`.
 
 <pre class="prettyprint linenums lang-sh">
 cd php-5.4.0
