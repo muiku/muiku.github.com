@@ -29,5 +29,5 @@ The Aery32 development board in detailed:
 <a class="fancy" href="/images/aery32bottom.png" title="Aery32 bottom side">
 <img src="/images/thumbs/aery32bottom.png" alt="Aery32 bottom side" /></a>
 
-We are about to start assembling next week and looking forward to soft release the software framework in GitHub for early adopters. Consider this like a release candidate. The final release is likely happen in March at www.aery32.com. Early adopters may like to write us (comment below) what kind of project you would like to start by using Aery32. We are sharing few boards free and you may be one of the first having it :)
+We are about to start assembling next week and looking forward to soft release the software framework in GitHub for early adopters. Consider this like a release candidate. The final release is likely happen in March at [www.aery32.com](http://www.aery32.com). Early adopters may like to write us (comment below) what kind of project you would like to start by using Aery32. We are sharing few boards free and you may be one of the first having it :)
 
