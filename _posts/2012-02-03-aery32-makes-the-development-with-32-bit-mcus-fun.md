@@ -8,7 +8,7 @@ tags:
 - avr32
 ---
 
-32-bit microcontrollers (MCUs) are often considered hard to use and cumbersome to adapt. Thus 8-bits are still popular among hobbyist and hardware designers, although 32-bits offer way more functionality and uses even less power. We have used 32-bits in our projects and decided to share our knowledge to help you to make fun with 32-bits. To smooth the adaptation of 32-bits we have designed a development board named as Aery32. It represents an excellent PCB design and good quality components and thus can be even a part of the end product. In addition to the development board we have also developed a software framework. The ambition of the software framework is to provide a lean library and project structure for agile embedded software development.
+32-bit microcontrollers (MCUs) are often considered hard to use and cumbersome to adapt. Thus 8-bits are still popular among hobbyist and hardware designers, although 32-bits offer way more functionality and uses even less power. We have used 32-bits in our projects and decided to share our knowledge to help you to make fun with 32-bits. To smooth the adaptation of 32-bits we have designed a development board named as Aery32. It represents an excellent PCB design and good quality components. In addition to the development board we have also developed a software framework. The ambition of the software framework is to provide a lean library and project structure for agile embedded software development.
 
 __The best part!__
 
